@@ -36,6 +36,7 @@ def model_fn(model_dir):
     
     """
     model = FlagModel(model_dir)
+    # model = FlagModel(model_dir, use_fp16=False) # fp16 is for GPU
     return model
 
 

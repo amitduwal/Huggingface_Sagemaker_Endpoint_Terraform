@@ -99,7 +99,14 @@ resource "aws_sagemaker_endpoint_configuration" "bge_sagemaker_endpoint_configur
         model_name = aws_sagemaker_model.bge_sagemaker_model.name
         variant_name = "Version1"
         initial_instance_count = 1
-        instance_type = "ml.g4dn.xlarge"
+
+        # for CPU instance
+        instance_type = "ml.m5.xlarge"
+
+        # for GPU instance
+        # instance_type = "ml.g4dn.xlarge"
+
+        # for serverless endpoint
         # serverless_config {
         #     memory_size_in_mb = var.memory_size_in_mb
         #     max_concurrency = var.max_concurrency
