@@ -5,6 +5,15 @@ from json import JSONEncoder
 import numpy
 
 
+# for CPU run
+# image used:
+# 763104351884.dkr.ecr.ap-south-1.amazonaws.com/pytorch-inference:1.7.1-cpu-py3
+
+
+# and for flagmodel as well for CPU run you can add following two lines
+# os.environ["CUDA_VISIBLE_DEVICES"] = "" 
+# model = FlagModel(model_dir, use_fp16=False) # fp16 is for GPU
+
 class NumpyArrayEncoder(JSONEncoder):
     def default(self, obj):
         if isinstance(obj, numpy.ndarray):
