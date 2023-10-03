@@ -17,7 +17,7 @@ project-root/
   ├── sagemakerinstance/  
   │   ├── inference.py             # Python script for inference
   │   ├── requirements.txt         # Python dependencies
-  │   ├── inference2.py            # Another Python script for inference
+  │   └── inference2.py            # Another Python script for inference
   │   └── model_artifacts.ipynb    # Jupyter notebook for model artifacts
   ├── modules/
   │   ├── sagemaker_notebook_instance/
